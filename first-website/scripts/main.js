@@ -236,3 +236,7 @@ document.getElementById('story').textContent = newStory;
 }
 
 document.getElementById('generate').addEventListener('click', generateRandomStory);
+
+'3' ==3
+vs 
+3 === 3
