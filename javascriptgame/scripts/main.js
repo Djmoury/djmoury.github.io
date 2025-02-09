@@ -42,6 +42,10 @@ setUserNameButton.addEventListener("click", setUserName);
 startGameButton.addEventListener("click", startGame);
 submitAnswerButton.addEventListener("click", checkAnswer);
 
+if (playerName !== "Player") {
+  alert(`Welcome back, ${playerName}!`);
+}
+
 function setUserName() {
   const name = prompt("Enter your name:");
   if (name) {
