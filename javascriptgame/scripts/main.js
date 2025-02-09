@@ -21,7 +21,7 @@ const questionBank = [
   { "question": "Which keyword is used to handle errors in JavaScript?", "answer": "try" }
 ];
 
-let playerName = localStorage.getItem("name") || "Player";
+let playerName = localStorage.getItem("name") || "";
 let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -36,15 +36,19 @@ const timerElement = document.querySelector("#timer");
 const questionElement = document.querySelector("#question");
 const answerField = document.querySelector("#answerField");
 
+
+if (!playerName) {
+  alert("Please enter your name to start the quiz.");
+  setUserName(); 
+}
+
 playerNameElement.textContent = `Welcome to the Timed JavaScript Quiz!, ${playerName}!`;
 
 setUserNameButton.addEventListener("click", setUserName);
 startGameButton.addEventListener("click", startGame);
 submitAnswerButton.addEventListener("click", checkAnswer);
 
-if (playerName !== "Player") {
-  alert(`Welcome back, ${playerName}!`);
-}
+
 
 function setUserName() {
   const name = prompt("Enter your name:");
