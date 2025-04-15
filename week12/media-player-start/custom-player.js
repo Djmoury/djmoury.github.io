@@ -109,7 +109,9 @@ function windBackward() {
       timerWrapper.clientWidth * (media.currentTime / media.duration);
     timerBar.style.width = `${barLength}px`;
   }
-  document.getElementById('volumeSlider').addEventListener('input', function () {
+  const video = document.getElementById('video');
+  const volumeSlider = document.getElementById('volumeSlider');
+  
+  volumeSlider.addEventListener('input', function () {
     video.volume = this.value;
   });
-  

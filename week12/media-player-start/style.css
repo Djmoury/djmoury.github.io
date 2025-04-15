@@ -119,3 +119,11 @@ button:active {
 .active:before {
   color: red;
 }
+
+#volumeSlider {
+  writing-mode: bt-lr; /* For vertical slider */
+  -webkit-appearance: slider-vertical;
+  width: 8px;
+  height: 100px;
+  margin-left: 10px;
+}
