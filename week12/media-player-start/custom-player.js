@@ -111,6 +111,6 @@ function windBackward() {
   }
   const volumeSlider = document.getElementById('volumeSlider');
 
-  volumeSlider.addEventListener('input', function () {
-    video.volume = this.value;
+  volumeSlider.addEventListener('input', () => {
+    video.volume = parseFloat(volumeSlider.value);
   });
