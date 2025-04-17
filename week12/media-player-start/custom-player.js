@@ -114,4 +114,10 @@ function windBackward() {
 
   volumeSlider.addEventListener('input', () => {
   video.volume = parseFloat(volumeSlider.value);
+  const muteButton = document.querySelector('.mute');
+
+  muteButton.addEventListener('click', () => {
+  video.muted = !video.muted;
+  muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
+});
 });
