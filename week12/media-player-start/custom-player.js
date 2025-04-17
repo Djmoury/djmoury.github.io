@@ -109,15 +109,16 @@ function windBackward() {
       timerWrapper.clientWidth * (media.currentTime / media.duration);
     timerBar.style.width = `${barLength}px`;
   }
-  const video = document.querySelector('video');
   const volumeSlider = document.getElementById('volumeSlider');
 
   volumeSlider.addEventListener('input', () => {
-  video.volume = parseFloat(volumeSlider.value);
-  const muteButton = document.querySelector('.mute');
+  media.volume = parseFloat(volumeSlider.value);
+  })
 
+  const muteButton = document.querySelector('.mute');
+  
   muteButton.addEventListener('click', () => {
-  video.muted = !video.muted;
-  muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
-});
+  media.muted = !media.muted;
+  muteButton.textContent = media.muted ? 'Unmute' : 'Mute';
+  volumeSlider.disabled = media.muted;
 });
