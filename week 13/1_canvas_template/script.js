@@ -11,3 +11,6 @@ ctx.fillRect(50, 50, 100, 150);
 
 ctx.fillStyle = "rgb(0 255 0)";
 ctx.fillRect(75, 75, 100, 100);
+
+ctx.fillStyle = "rgb(255 0 255 / 75%)";
+ctx.fillRect(25, 100, 175, 50);
